@@ -3,12 +3,12 @@
 #include <vector>
 
 namespace ft {
-	template<class T, class Container = std::vector<T>>  // to change
+	template<class T, class container_type = std::vector<T>>  // to change
 	class stack {
 		private:
-			Container container;
+			container_type container;
 		public:
-			explicit stack (const Container& ctnr = Container()) : container(ctnr) {}
+			explicit stack (const container_type& ctnr = container_type()) : container(ctnr) {}
 
 			~stack() {};
 
@@ -36,27 +36,27 @@ namespace ft {
 				return (this->container.back());
 			}
 
-			friend bool operator== (const stack<T,Container>& lhs, const stack<T,Container>& rhs) {
+			friend bool operator== (const stack<T,container_type>& lhs, const stack<T,container_type>& rhs) {
 				return(lhs.container == rhs.container);
 			}
 
-			friend bool operator!= (const stack<T,Container>& lhs, const stack<T,Container>& rhs) {
+			friend bool operator!= (const stack<T,container_type>& lhs, const stack<T,container_type>& rhs) {
 				return(lhs.container != rhs.container);
 			}
 
-			friend bool operator<  (const stack<T,Container>& lhs, const stack<T,Container>& rhs) {
+			friend bool operator<  (const stack<T,container_type>& lhs, const stack<T,container_type>& rhs) {
 				return(lhs.container < rhs.container);
 			}
 
-			friend bool operator<= (const stack<T,Container>& lhs, const stack<T,Container>& rhs) {
+			friend bool operator<= (const stack<T,container_type>& lhs, const stack<T,container_type>& rhs) {
 				return(lhs.container <= rhs.container);
 			}
 
-			friend bool operator>  (const stack<T,Container>& lhs, const stack<T,Container>& rhs) {
+			friend bool operator>  (const stack<T,container_type>& lhs, const stack<T,container_type>& rhs) {
 				return(lhs.container > rhs.container);
 			}
 
-			friend bool operator>= (const stack<T,Container>& lhs, const stack<T,Container>& rhs) {
+			friend bool operator>= (const stack<T,container_type>& lhs, const stack<T,container_type>& rhs) {
 				return(lhs.container >= rhs.container);
 			}
 	};
