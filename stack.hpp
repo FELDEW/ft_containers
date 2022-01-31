@@ -8,8 +8,6 @@ namespace ft {
 		private:
 			Container container;
 		public:
-//			typedef size_t	size_type; // to change
-
 			explicit stack (const Container& ctnr = Container()) : container(ctnr) {}
 
 			~stack() {};
@@ -26,7 +24,7 @@ namespace ft {
 				this->container.push_back(val);
 			}
 
-			size_type size() const {
+			size_t size() const {
 				return (this->container.size());
 			}
 
